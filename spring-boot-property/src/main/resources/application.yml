@@ -1,0 +1,9 @@
+name: huchx
+random: ${random.int(10)}
+
+huchx:
+  name: huchx
+  age: 10
+  list:
+    - desc: aaa
+    - desc: bbb
