@@ -12,6 +12,7 @@
     <module>spring-boot-hello</module>
     <module>spring-boot-application</module>
     <module>spring-boot-property</module>
+      <module>spring-boot-logging</module>
   </modules>
 
   <name>spring-boot-parent</name>
