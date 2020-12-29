@@ -34,22 +34,18 @@ public class JsonApp
     }
     @RequestMapping("json")
     public Object json(){
-//        String jsonStr = "[{\"name\":\"huchx\",\"age\":\"1\"},{\"name\":\"huchx2\",\"age\":\"12\"}]";
-        List<UserPojo> userPojos = new ArrayList<>();
-        userPojos.add(new UserPojo("huchx","1"));
-        userPojos.add(new UserPojo("huchx2","12"));
+        String jsonStr = "[{\"name\":\"huchx\",\"age\":\"1\"},{\"name\":\"huchx2\",\"age\":\"12\"}]";
         Map<String,Object> result = new HashMap<String, Object>();
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             //Jackson
-            String jsonStr = new ObjectMapper().writeValueAsString(userPojos);
             result.put("jackson",objectMapper.readValue(jsonStr, new TypeReference<List<UserPojo>>(){}));
 //
 //            //Gson
             Gson gson = new Gson();
             result.put("Gson",gson.fromJson(jsonStr,new TypeToken<List<UserPojo>>(){}.getType()));
 
-            //Gson序列化
+            //Gson 使用GsonBuilder添加限制策略
             Gson gson1 = new GsonBuilder().setExclusionStrategies(new GsonTransparentStrategy()).create();
             AddressPojo addressPojo = new AddressPojo("huchx3","15500000000","北京市天安门");
             result.put("GsonStr",gson1.toJson(addressPojo));
