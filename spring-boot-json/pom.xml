@@ -9,26 +9,32 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-property</artifactId>
+    <artifactId>spring-boot-json</artifactId>
 
-    <name>spring-boot-property</name>
+    <name>spring-boot-json</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
+
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <scope>test</scope>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.johnzon/johnzon-core -->
+        <dependency>
+            <groupId>org.apache.johnzon</groupId>
+            <artifactId>johnzon</artifactId>
+            <version>1.2.8</version>
         </dependency>
 
     </dependencies>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-            <plugins>
 
-            </plugins>
         </pluginManagement>
     </build>
 </project>

@@ -13,6 +13,7 @@
     <module>spring-boot-application</module>
     <module>spring-boot-property</module>
       <module>spring-boot-logging</module>
+    <module>spring-boot-json</module>
   </modules>
 
   <name>spring-boot-parent</name>
