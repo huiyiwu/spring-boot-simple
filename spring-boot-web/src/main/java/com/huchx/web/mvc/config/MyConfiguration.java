@@ -1,7 +1,10 @@
 package com.huchx.web.mvc.config;
 
 import com.huchx.web.mvc.bind.MyDateWebBindingInitializer;
+import com.huchx.web.mvc.register.MyErrorPageRegister;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.server.ErrorPageRegistrar;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 
@@ -28,8 +31,13 @@ public class MyConfiguration {
 //        return new HttpMessageConverters(messageConverter);
 //    }
 
+    /**
+     * 配置BinderInitializer bean，注入时间类型转换
+     * @param requestMappingHandlerAdapter
+     */
     @Autowired
     public void setWebBindingInitializer(RequestMappingHandlerAdapter requestMappingHandlerAdapter){
         requestMappingHandlerAdapter.setWebBindingInitializer(new MyDateWebBindingInitializer());
     }
+
 }

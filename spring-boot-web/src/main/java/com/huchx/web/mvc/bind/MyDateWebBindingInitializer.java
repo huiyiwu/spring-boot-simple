@@ -9,6 +9,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.SimpleFormatter;
 
+/**
+ * 使用initBinder处理参数，将参数传给编辑器
+ */
 public class MyDateWebBindingInitializer implements WebBindingInitializer {
     @Override
     public void initBinder(WebDataBinder webDataBinder) {

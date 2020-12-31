@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.HashMap;
 import java.util.Map;
 
-//@ControllerAdvice
+@ControllerAdvice
 public class MyGlobalExceptionHandler {
     @ResponseBody
     @ExceptionHandler(value = Exception.class)
