@@ -1,0 +1,8 @@
+#测试图片访问放开；http://localhost:8080/imgs/1.jpg，放开后访问index.html，要加imgs/index.html
+#spring:
+#  mvc:
+#    static-path-pattern: /imgs/**
+
+server:
+  port: 8081
+

@@ -14,6 +14,7 @@
     <module>spring-boot-property</module>
       <module>spring-boot-logging</module>
     <module>spring-boot-json</module>
+      <module>spring-boot-web</module>
   </modules>
 
   <name>spring-boot-parent</name>
