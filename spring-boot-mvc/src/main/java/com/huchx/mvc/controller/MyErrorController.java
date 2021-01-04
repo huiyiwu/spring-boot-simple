@@ -1,4 +1,4 @@
-package com.huchx.web.mvc.controller;
+package com.huchx.mvc.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;

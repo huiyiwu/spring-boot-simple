@@ -1,13 +1,11 @@
-package com.huchx.web.mvc.bind;
+package com.huchx.mvc.bind;
 
-import lombok.Data;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.support.WebBindingInitializer;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 /**
  * 使用initBinder处理参数，将参数传给编辑器

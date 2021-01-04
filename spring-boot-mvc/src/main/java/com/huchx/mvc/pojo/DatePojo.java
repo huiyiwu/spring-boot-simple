@@ -1,4 +1,4 @@
-package com.huchx.web.mvc.pojo;
+package com.huchx.mvc.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

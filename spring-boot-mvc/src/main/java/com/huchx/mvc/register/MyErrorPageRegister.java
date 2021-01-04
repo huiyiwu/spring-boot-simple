@@ -1,4 +1,4 @@
-package com.huchx.web.mvc.register;
+package com.huchx.mvc.register;
 
 import org.springframework.boot.web.server.ErrorPage;
 import org.springframework.boot.web.server.ErrorPageRegistrar;

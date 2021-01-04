@@ -1,10 +1,7 @@
-package com.huchx.web.mvc.config;
+package com.huchx.mvc.config;
 
-import com.huchx.web.mvc.bind.MyDateWebBindingInitializer;
-import com.huchx.web.mvc.register.MyErrorPageRegister;
+import com.huchx.mvc.bind.MyDateWebBindingInitializer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.server.ErrorPageRegistrar;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter;
 

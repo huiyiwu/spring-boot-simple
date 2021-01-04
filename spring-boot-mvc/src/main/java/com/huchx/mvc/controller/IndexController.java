@@ -1,21 +1,17 @@
-package com.huchx.web.mvc.controller;
+package com.huchx.mvc.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.huchx.web.mvc.pojo.ClothColorPojo;
-import com.huchx.web.mvc.pojo.DatePojo;
-import com.huchx.web.mvc.pojo.UserPojo;
+import com.huchx.mvc.pojo.ClothColorPojo;
+import com.huchx.mvc.pojo.UserPojo;
 import javafx.scene.paint.Color;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController

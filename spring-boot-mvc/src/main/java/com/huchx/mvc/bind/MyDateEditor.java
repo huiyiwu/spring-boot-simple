@@ -1,6 +1,4 @@
-package com.huchx.web.mvc.bind;
-
-import org.springframework.beans.PropertyValuesEditor;
+package com.huchx.mvc.bind;
 
 import java.beans.PropertyEditorSupport;
 import java.util.Date;
