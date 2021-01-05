@@ -30,7 +30,7 @@ public class UserService {
 //     */
 //    public List<Map<String,Object>> select() {
 //        JdbcTemplate jdbcTemplate = initJdbcTemplate();
-//        String sql = "Select * from m_user";
+//        String sql = "Select * from m_jdbc_template";
 //        List<Map<String,Object>> users = jdbcTemplate.queryForList(sql);
 //        return users;
 //    }
@@ -40,7 +40,7 @@ public class UserService {
 //     */
 //    public void insert(String name) {
 //        JdbcTemplate jdbcTemplate = initJdbcTemplate();
-//        String sql = "insert into m_user (id,name) values (null,?)";
+//        String sql = "insert into m_jdbc_template (id,name) values (null,?)";
 //        jdbcTemplate.update(sql,name);
 //    }
 //
@@ -49,7 +49,7 @@ public class UserService {
 //     */
 //    public void update(int id,String name) {
 //        JdbcTemplate jdbcTemplate = initJdbcTemplate();
-//        String sql = "update m_user set name = ? where id = ?";
+//        String sql = "update m_jdbc_template set name = ? where id = ?";
 //        jdbcTemplate.update(sql,name,id);
 //    }
 //
@@ -58,7 +58,7 @@ public class UserService {
 //     */
 //    public void delete(int id) {
 //        JdbcTemplate jdbcTemplate = initJdbcTemplate();
-//        String sql = "delete from m_user where id = ?";
+//        String sql = "delete from m_jdbc_template where id = ?";
 //        jdbcTemplate.update(sql,id);
 //    }
 
@@ -73,7 +73,7 @@ public class UserService {
      */
     public List<Map<String,Object>> select() {
 
-        String sql = "Select * from m_user";
+        String sql = "Select * from m_jdbc_template";
         List<Map<String,Object>> users = jdbcTemplate.queryForList(sql);
         return users;
     }
@@ -82,7 +82,7 @@ public class UserService {
      * 插入
      */
     public void insert(String name) {
-        String sql = "insert into m_user (id,name) values (null,?)";
+        String sql = "insert into m_jdbc_template (id,name) values (null,?)";
         jdbcTemplate.update(sql,name);
     }
 
@@ -90,7 +90,7 @@ public class UserService {
      * 更新
      */
     public void update(int id,String name) {
-        String sql = "update m_user set name = ? where id = ?";
+        String sql = "update m_jdbc_template set name = ? where id = ?";
         jdbcTemplate.update(sql,name,id);
     }
 
@@ -98,7 +98,7 @@ public class UserService {
      * 删除
      */
     public void delete(int id) {
-        String sql = "delete from m_user where id = ?";
+        String sql = "delete from m_jdbc_template where id = ?";
         jdbcTemplate.update(sql,id);
     }
 }
