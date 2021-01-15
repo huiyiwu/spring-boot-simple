@@ -18,6 +18,9 @@
         <module>spring-boot-data-jpa</module>
         <module>spring-boot-application</module>
         <module>spring-boot-data-redis</module>
+        <module>spring-boot-mongodb</module>
+        <module>spring-boot-neo4j</module>
+        <module>spring-boot-activemq</module>
     </modules>
 
     <name>spring-boot-parent</name>
