@@ -21,6 +21,7 @@
         <module>spring-boot-mongodb</module>
         <module>spring-boot-neo4j</module>
         <module>spring-boot-activemq</module>
+        <module>spring-boot-rest</module>
     </modules>
 
     <name>spring-boot-parent</name>
