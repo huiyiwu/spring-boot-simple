@@ -24,7 +24,7 @@ public class AddressController {
         return  addressService.getByTemplate();
     }
 
-    @RequestMapping("/clinet")
+    @RequestMapping("/client")
     public List<AddressInfo> client(){
         return  addressService.getByClient();
     }
