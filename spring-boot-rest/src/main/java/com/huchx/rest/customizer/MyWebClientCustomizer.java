@@ -1,4 +1,4 @@
-package com.huchx.rest.config;
+package com.huchx.rest.customizer;
 
 import org.springframework.boot.web.reactive.function.client.WebClientCustomizer;
 import org.springframework.stereotype.Component;
