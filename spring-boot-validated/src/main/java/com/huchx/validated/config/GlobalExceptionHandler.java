@@ -23,6 +23,11 @@ import javax.validation.ConstraintViolationException;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    /**
+     * 使用Post方式请求，RequetBody接收时捕获
+     * @param exception
+     * @return
+     */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Map handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
         StringBuilder errorInfo = new StringBuilder();
@@ -35,11 +40,10 @@ public class GlobalExceptionHandler {
             errorInfo.append(fieldError.getField()).append(" :").append(fieldError.getDefaultMessage());
         }
 
-        //返回BaseResponse
-        Map response = new HashMap();
-        response.put("message",errorInfo.toString());
-        response.put("code",500);
-        return response;
+        Map errResult = new HashMap();
+        errResult.put("message",errorInfo.toString());
+        errResult.put("code",500);
+        return errResult;
     }
 
 
@@ -54,27 +58,32 @@ public class GlobalExceptionHandler {
             msg.append("[").append(message).append("]");
         }
 
-
-        //返回BaseResponse
-        Map response = new HashMap();
-        response.put("message",msg);
-        response.put("code",501);
-        return response;
+        Map errResult = new HashMap();
+        errResult.put("message",msg);
+        errResult.put("code",501);
+        return errResult;
     }
+
+    /**
+     *使用Post方式，但不用JSON方式提交时捕获
+     * @param e
+     * @param request
+     * @return
+     */
     @ExceptionHandler(BindException.class)
     public Map exceptionHandler(BindException e, HttpServletRequest request) {
         String failMsg = e.getBindingResult().getFieldError().getDefaultMessage();
-        Map response = new HashMap();
-        response.put("message",failMsg);
-        response.put("code",502);
-        return response;
+        Map errResult = new HashMap();
+        errResult.put("message",failMsg);
+        errResult.put("code",502);
+        return errResult;
     }
 
     @ExceptionHandler(Exception.class)
     public Map handleDefaultException(Exception exception) {
-        Map response = new HashMap();
-        response.put("message",exception.getMessage());
-        response.put("code",503);
-        return response;
+        Map errResult = new HashMap();
+        errResult.put("message",exception.getMessage());
+        errResult.put("code",503);
+        return errResult;
     }
 }
