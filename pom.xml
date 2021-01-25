@@ -23,6 +23,7 @@
         <module>spring-boot-activemq</module>
         <module>spring-boot-rest</module>
         <module>spring-boot-validated</module>
+        <module>spring-boot-email</module>
     </modules>
 
     <name>spring-boot-parent</name>
