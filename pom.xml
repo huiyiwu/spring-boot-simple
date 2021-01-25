@@ -22,6 +22,7 @@
         <module>spring-boot-neo4j</module>
         <module>spring-boot-activemq</module>
         <module>spring-boot-rest</module>
+        <module>spring-boot-validated</module>
     </modules>
 
     <name>spring-boot-parent</name>
