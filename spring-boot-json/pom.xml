@@ -25,9 +25,9 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.johnzon/johnzon-core -->
         <dependency>
-            <groupId>org.apache.johnzon</groupId>
-            <artifactId>johnzon</artifactId>
-            <version>1.2.8</version>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-jsonb_1.0_spec</artifactId>
+            <version>1.2</version>
         </dependency>
 
     </dependencies>

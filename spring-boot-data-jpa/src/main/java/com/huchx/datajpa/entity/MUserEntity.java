@@ -10,6 +10,15 @@ public class MUserEntity {
     private String name;
     private Integer status;
 
+    public MUserEntity() {
+    }
+
+    public MUserEntity(int id, String name, Integer status) {
+        this.id = id;
+        this.name = name;
+        this.status = status;
+    }
+
     @Id
     @Column(name = "id")
     public int getId() {
