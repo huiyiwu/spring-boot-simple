@@ -25,6 +25,7 @@
         <module>spring-boot-validated</module>
         <module>spring-boot-email</module>
         <module>spring-boot-test</module>
+        <module>spring-boot-websokcet</module>
     </modules>
 
     <name>spring-boot-parent</name>
