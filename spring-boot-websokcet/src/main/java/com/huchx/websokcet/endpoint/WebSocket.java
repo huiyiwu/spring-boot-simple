@@ -48,13 +48,13 @@ public class WebSocket {
         logger.info("[WebSocket] 收到消息：{}",message);
         if (message.indexOf("HUCHX")==0){
             String name = message.substring(message.indexOf("HUCHX")+6,message.indexOf(";"));
-            AppointSending(name,message.substring(message.indexOf(";")+1,message.length()));
+            sendOne(name,message.substring(message.indexOf(";")+1,message.length()));
         }else {
-            GroupSending(message);
+            sendAll(message);
         }
     }
 
-    private void GroupSending(String message) {
+    private void sendAll(String message) {
         for (String name: webSocKetSet.keySet()){
             try {
                 webSocKetSet.get(name).session.getBasicRemote().sendText(message);
@@ -64,7 +64,7 @@ public class WebSocket {
         }
     }
 
-    private void AppointSending(String name, String msg) {
+    private void sendOne(String name, String msg) {
         try {
             webSocKetSet.get(name).session.getBasicRemote().sendText(msg);
         } catch (IOException e) {
