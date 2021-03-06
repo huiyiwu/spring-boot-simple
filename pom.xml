@@ -26,6 +26,8 @@
         <module>spring-boot-email</module>
         <module>spring-boot-test</module>
         <module>spring-boot-websokcet</module>
+        <module>spring-boot-webservice</module>
+        <module>spring-boot-webservice-client</module>
     </modules>
 
     <name>spring-boot-parent</name>
